@@ -7,6 +7,7 @@ Attention-based Fractal Unet (AFUnet) for brain tumor segmentation using 2D neur
 - [Acknowledgments](#Acknowledgments)
 
 # Overview
+The proposed Attention-based Fractal Unet (AFUnet) combines the ideas of the fractal convolutional network, attention blocks, and autoencoding-decoding Unet sturctures.
 
 ## Methodology
 
