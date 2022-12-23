@@ -1,5 +1,7 @@
 # DL AFUnet 3D BrainSeg
 Attention-based Fractal Unet (AFUnet) for brain tumor segmentation using 2D neuroimaging and 3D volumetric brain data
+![image](Images/explanations.jpg)
+
 # Table of Contents
 - [Overview](#Overview)
 - [Code](#Code)
@@ -8,7 +10,6 @@ Attention-based Fractal Unet (AFUnet) for brain tumor segmentation using 2D neur
 
 # Overview
 The proposed Attention-based Fractal Unet (AFUnet) combines the ideas of the fractal convolutional network, attention blocks, and autoencoding-decoding Unet sturctures.
-![image](Images/explanations.jpg)
 
 ## Methodology
 
