@@ -191,39 +191,6 @@ def boundary_compare(path1, path2, original, gnd):
     return edges_pz
 
 
-def plot_ci(x):
-
-    x = [0,1,2,3]
-    # y = [99.55, 97.57, 95.27, 96.85, 93.98]
-    list_y = [[0.7304, 0.7413, 0.7381, 0.7193, 0.6883],
-              [0.8166, 0.8187, 0.8140, 0.8163, 0.7954],
-              [0.8728, 0.8613, 0.8547, 0.8422, 0.8307],
-              [0.8619, 0.8586, 0.8392, 0.8338, 0.8369]
-    ]
-    alpha_values = [0, 1, 2, 3]
-    list_nll = []
-    for i in range(4):
-      list_nll.append(np.mean(list_y[i]))
-    list_low = []
-    list_up = []
-    for i in range(4):
-      ci = 1.96 * np.std(list_y[i])/np.sqrt(5)
-      list_low.append(np.mean(list_y[i])-ci)
-      list_up.append(np.mean(list_y[i])+ci)
-      print(np.mean(list_y[i]))
-      print(ci)
-    fig, ax = plt.subplots()
-    ax.plot(x, list_nll)
-    ax.fill_between(x, list_low, list_up, color='b', alpha=.1)
-
-    # plt.plot(x, list_nll, label = "NLL vs alpha values")
-    plt.xlabel("The iteration depth")
-    plt.ylabel("Dice Score")
-    plt.xticks(x, alpha_values)
-    plt.legend()
-    plt.show()
-
-
 def output_save_3d(model, original, gnd, save_path):
     
     original = original.view(1, 4, 128, 128, 64)
